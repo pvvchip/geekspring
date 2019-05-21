@@ -1,3 +1,18 @@
+CREATE TABLE `geek_db`.`books` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `describe` VARCHAR(255) NULL,
+  `year` INT NULL,
+  PRIMARY KEY (`id`));
+  ---
+INSERT INTO `geek_db`.`books` (`name`, `describe`, `year`) VALUES ('book_1', 'text_1', '2000');
+INSERT INTO `geek_db`.`books` (`name`, `describe`, `year`) VALUES ('book_2', 'text_2', '2001');
+INSERT INTO `geek_db`.`books` (`name`, `describe`, `year`) VALUES ('book_3', 'text_3', '2003');
+INSERT INTO `geek_db`.`books` (`name`, `describe`, `year`) VALUES ('book_4', 'text_4', '2004');
+INSERT INTO `geek_db`.`books` (`name`, `describe`, `year`) VALUES ('book_5', 'text_5', '2005');
+
+----------------------------------------------------------------------------------------------------
+
 CREATE USER 'geek'@'localhost' IDENTIFIED BY 'geek';
 GRANT ALL PRIVILEGES ON * . * TO 'geek'@'localhost';
 ---
@@ -41,18 +56,12 @@ INSERT INTO `geek_db`.`courses` (`title`) VALUES ('Algebra');
 INSERT INTO `geek_db`.`courses` (`title`) VALUES ('Literatura');
 INSERT INTO `geek_db`.`courses` (`title`) VALUES ('Phisika');
 
-
-
-
-
-
-
-
-
-
-
-
-
+INSERT INTO `geek_db`.`students_courses` (`student_id`, `course_id`) VALUES ('1', '2');
+INSERT INTO `geek_db`.`students_courses` (`student_id`, `course_id`) VALUES ('1', '3');
+INSERT INTO `geek_db`.`students_courses` (`student_id`, `course_id`) VALUES ('2', '1');
+INSERT INTO `geek_db`.`students_courses` (`student_id`, `course_id`) VALUES ('2', '3');
+INSERT INTO `geek_db`.`students_courses` (`student_id`, `course_id`) VALUES ('3', '1');
+INSERT INTO `geek_db`.`students_courses` (`student_id`, `course_id`) VALUES ('3', '2');
 
 
 ---
